@@ -29,14 +29,13 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v5
         with:
-          cache-dependency-glob: "uv.lock"
           enable-cache: true
           python-version: ${{ matrix.python-version }}
           version: "0.5.13"
 
       - name: Install library and dependencies
         run: |
-          uv sync --frozen
+          uv sync
 
       - name: Build releases
         run: |
