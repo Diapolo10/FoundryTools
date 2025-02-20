@@ -147,3 +147,6 @@ tests/reports
 
 # Logs
 logs/
+
+# Uv lock not needed for a library
+uv.lock
