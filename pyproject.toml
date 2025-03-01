@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "foundrytools"
-dynamic = ["version"]
+version = "0.1.2"
 description = "A library for working with fonts in Python."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -74,9 +74,6 @@ omit = [
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/foundrytools"]
-
-[tool.hatch.version]
-source = "uv-dynamic-versioning"
 
 
 [tool.mypy]
@@ -179,8 +176,3 @@ commands =
     uv run --frozen pytest
     uv run --frozen coverage report
 """
-
-[tool.uv-dynamic-versioning]
-strict = false
-style = "semver"
-vcs = "git"
